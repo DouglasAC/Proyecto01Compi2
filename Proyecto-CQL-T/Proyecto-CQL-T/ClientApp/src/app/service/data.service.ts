@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: "root"
+})
+
+@Injectable()
+export class DataService {
+  public tenviado="";
+  public tresivido = "";
+  public usuario = "admin";
+  public bloc: any;
+
+  public data: any[] = [{ text: "Bases"}];
+}

@@ -1,0 +1,78 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-sm-2'>
+      <button type="button" class="btn btn-secondary" (click)="generarStruct()">Cargar Bases</button>
+      <app-treeview></app-treeview>
+    </div>
+
+    <div align="center">
+      
+      <h3>
+        <button type="button" class="btn btn-warning" (click)="limpiarenvios()">Limpiar envios</button>
+        <button type="button" class="btn btn-warning" (click)="limpiarrespuestas()">Limpiar respuestas</button>
+        Modo Avanzado
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+      </h3>
+      
+    </div>
+    <div class='col-sm-9'>
+      <button class="btn btn-info" (click)="addTabPanel2()"> Nueva </button>
+      <input type='file' (change)="funAbrir($event)">
+
+    </div>
+
+    
+    <div class='col-sm-9'>
+
+      <mat-tab-group [selectedIndex]="selectedpanel.value"
+                     (selectedIndexChange)="selectedpanel.setValue($event)">
+        <mat-tab *ngFor="let tab of tabspanel; let indes = index" [label]="tab">
+          <button id="bot{{indes}}" mat-raised-button class="btn btn-info" (click)="vereditor(indes)">
+            Ver Editor
+          </button>
+          <button mat-raised-button class="btn btn-success" (click)="funEjecutar(indes)">
+            Ejecutar
+          </button>
+          <button mat-raised-button class="btn btn-warning" (click)="funEjecutarSeleccion(indes)">
+            Ejecutar Seleccion
+          </button>
+          <button mat-raised-button class="btn btn-primary" (click)="funGuradar(indes)">
+            Guardar
+          </button>
+          <button mat-raised-button class="btn btn-danger" (click)="removeTabpanel(indes)">
+            Delete Tab
+          </button>
+          <div class="code-editor" id="conde{{indes}}" style="width: 800px;"></div>
+
+
+        </mat-tab>
+      </mat-tab-group>
+      
+    </div>
+
+    <div class='col-sm-9'>
+      <mat-tab-group [selectedIndex]="selected.value"
+                     (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab label="Consola">
+          <p *ngFor="let tx of consola">{{tx}}</p>
+        </mat-tab>
+        <mat-tab *ngFor="let tab of tabs; let inde = index" [label]="tab">
+
+
+          <button mat-raised-button class="btn btn-secondary" (click)="addHTML(inde)">
+            Poner consulta
+          </button>
+          <button mat-raised-button class="btn btn-danger" (click)="removeTab(inde)">
+            Delete Tab
+          </button>
+          <div id="con{{inde}}">
+
+          </div>
+
+
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+  </div>
+</div>

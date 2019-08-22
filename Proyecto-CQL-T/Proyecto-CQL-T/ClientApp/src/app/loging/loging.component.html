@@ -1,0 +1,11 @@
+<div class="login-page">
+  <div class="form">
+    
+    <form class="login-form">
+      <input #usuario type="text" placeholder="username" />
+      <input #clave type="password" placeholder="password" />
+      <button (click)="enviar(usuario.value,clave.value)">login</button>
+     
+    </form>
+  </div>
+</div>

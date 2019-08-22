@@ -1,0 +1,118 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-sm-2'>
+      <button type="button" class="btn btn-secondary" (click)="generarStruct()">Cargar Bases</button>
+      <app-treeview></app-treeview>
+    </div>
+    <div align="center">
+
+      <h3>
+        <button class="btn btn-info" (click)="generarcodigo()"> Inciar</button>
+        <button type="button" class="btn btn-warning" (click)="limpiarenvios()">Limpiar envios</button>
+        <button type="button" class="btn btn-warning" (click)="limpiarrespuestas()">Limpiar respuestas</button>
+        Modo Intermedio
+        <button class="btn btn-info" (click)="cambio()">Vista Previa</button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+      </h3>
+    </div>
+    <div class='col-sm-6'>
+      <section id="blocklyContainer" style="position: relative; width: 575px; height:450px;">
+        <div id="blocklyDiv" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+      </section>
+
+
+      <xml id="toolbox" style="display: none">
+
+        <category name="Sentencias" colour="65">
+          <block type="use"></block>
+          <block type="select"></block>
+          <block type="insert"></block>
+          <block type="insert_esp"></block>
+          <block type="update"></block>
+          <block type="delete"></block>
+        </category>
+        <category name="Atributos" colour="120">
+          <block type="atributos"></block>
+          <block type="comodin"></block>
+          <block type="cierra"></block>
+        </category>
+        <category name="Operadores" colour="260">
+          <block type="inicio_bool"></block>
+          <block type="relacionales"></block>
+          <block type="not"></block>
+          <block type="aritmeticas"></block>
+          <block type="unitarias"></block>
+          <block type="incremento_decremento_2"></block>
+          <block type="llamada_funcion"></block>
+          <block type="llamda_funciones_2"></block>
+          <block type="llamada_funcion_3"></block>
+          <block type="llamda_funciones_4"></block>
+        </category>
+        <category name="Valores" colour="330">
+          <block type="numero"></block>
+          <block type="bool"></block>
+          <block type="texto"></block>
+          <block type="fecha"></block>
+          <block type="tiemp"></block>
+        </category>
+        <category name="Variables" colour="20">
+          <block type="declaracion"></block>
+          <block type="declaracion_asignacion"></block>
+          <block type="asignacion"></block>
+          <block type="declaracion_asignacion_2"></block>
+          <block type="asignacion_2"></block>
+        </category>
+        <category name="Control" colour="0">
+          <block type="if"></block>
+          <block type="else"></block>
+          <block type="else_if"></block>
+          <block type="switch"></block>
+          <block type="case"></block>
+          <block type="default"></block>
+          <block type="detener"></block>
+        </category>
+        <category name="Ciclos" colour="180">
+          <block type="while"></block>
+          <block type="do_while"></block>
+          <block type="for"></block>
+        </category>
+        <category name="Procedimiento" colour="300">
+          <block type="log"></block>
+          <block type="llamada_proc"></block>
+          <block type="llamada_proc_2"></block>
+          <block type="llamada_proc_3"></block>
+          <block type="llamada_proc_4"></block>
+        </category>
+      </xml>
+
+    </div>
+    <div class='col-sm-3'>
+      <div class="code-editor" #codeEditor style="width: 450px;"></div>
+    </div>
+    
+    <div class='col-sm-9'>
+      <mat-tab-group [selectedIndex]="selected.value"
+                     (selectedIndexChange)="selected.setValue($event)">
+        <mat-tab label="Consola">
+          <p *ngFor="let tx of consola">{{tx}}</p>
+        </mat-tab>
+        <mat-tab *ngFor="let tab of tabs; let inde = index" [label]="tab">
+
+
+          <button mat-raised-button class="btn btn-secondary" (click)="addHTML(inde)">
+            Poner consulta
+          </button>
+          <button mat-raised-button class="btn btn-danger" (click)="removeTab(inde)">
+            Delete Tab
+          </button>
+          <div id="con{{inde}}">
+
+          </div>
+
+
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+
+  </div>
+</div>
