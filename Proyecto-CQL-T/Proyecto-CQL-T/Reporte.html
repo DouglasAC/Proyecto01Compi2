@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf - 8">
+<meta name="viewport" content="width = device - width, initial - scale = 1, shrink - to - fit = no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<title>Reporte de Errores</title>
+</head>
+<body>
+<div class="container">
+<div class="jumbotron">
+<h1 class="display - 4">Reporte de Errores</h1>
+<p class="lead"> 201503935 | Douglas Daniel Aguilar Cuque</p>
+<p class="lead">16/09/2019 22:43:37</p>
+</div>
+<br>
+<h1> Errores Encontrados: </h1>
+<br>
+<table class="table table-bordered" >
+<thead class="thead-dark">
+<tr>
+<th scope="col">#</th>
+<th scope="col">Tipo</th>
+<th scope="col">Mensaje</th>
+<th scope="col">Linea</th>
+<th scope="col">Columna</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-danger text-white">
+<th scope="row">1</td>
+<td>Sintatico</td>
+<td>Error Sintactico | Se esperaba: 
+| Simbolo: "IDENTIFICADOR"
+</td>
+<td>28</td>
+<td>20</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">2</td>
+<td>Ejecucion</td>
+<td>La base: _01_database_ no existe</td>
+<td>24</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">3</td>
+<td>Ejecucion</td>
+<td>La tabla: customers ya existe en la base: _01_database</td>
+<td>46</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">4</td>
+<td>Ejecucion</td>
+<td>La columna: id, a agregar no debe ser de tipo counter</td>
+<td>50</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">5</td>
+<td>Ejecucion</td>
+<td>En la tabla: customers, la columna: customernumber, es llave primaria por lo tanto no se puede eliminar</td>
+<td>57</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">6</td>
+<td>Ejecucion</td>
+<td>El campo: customernumber, es tipo counter su valor se incrementa automaticamente por lo cual no se puede insertar este valor</td>
+<td>89</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">7</td>
+<td>Ejecucion</td>
+<td>El tipo: int, del valor a ingresar no es igual al tipo de la columna customername, de tipo:  string</td>
+<td>94</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">8</td>
+<td>Ejecucion</td>
+<td>La columna: addressline2, no existe en la tabla: customers, en la base: _01_database</td>
+<td>395</td>
+<td>0</td>
+</tr>
+<tr class="bg-danger text-white">
+<th scope="row">9</td>
+<td>Ejecucion</td>
+<td>La columna: addressline2, no existe en la tabla: customers, en la base: _01_database</td>
+<td>399</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<br>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

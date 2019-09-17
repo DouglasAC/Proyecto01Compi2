@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import * as $ from 'jquery';
 import * as ace from 'ace-builds';
 import 'ace-builds/src-noconflict/mode-javascript';
@@ -25,7 +26,7 @@ export class ModoIntermedioComponent {
 
   @ViewChild('codeEditor', { static: true }) codeEditorElmRef: ElementRef;
   private codeEditor: ace.Ace.Editor;
-  constructor(public data: DataService) {
+  constructor(public data: DataService, private router: Router) {
 
   }
 

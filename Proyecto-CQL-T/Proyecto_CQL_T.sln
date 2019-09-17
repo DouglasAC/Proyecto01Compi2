@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyecto-CQL-T", "Proyecto-CQL-T\Proyecto-CQL-T.csproj", "{B7322AE3-069B-4831-9950-2EBB11040E3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proyecto_CQL_T", "Proyecto-CQL-T\Proyecto_CQL_T.csproj", "{B7322AE3-069B-4831-9950-2EBB11040E3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

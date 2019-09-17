@@ -1,0 +1,2 @@
+graph G {node [shape=ellipse, style=filled, color=Gray95];
+ edge[color=lightblue];node0[label = "init"];node1[label = "paquetes"];node2[label = "paquete"];node3[label = "logout"];node4[label = "[+logout] (Key symbol)"];node5[label = "[+user] (Key symbol)"];node6[label = "admin (IDENTIFICADOR)"];node7[label = "[-user] (Key symbol)"];node8[label = "[-logout] (Key symbol)"];"node0"--"node1""node1"--"node2""node2"--"node3""node3"--"node4""node3"--"node5""node3"--"node6""node3"--"node7""node3"--"node8"}

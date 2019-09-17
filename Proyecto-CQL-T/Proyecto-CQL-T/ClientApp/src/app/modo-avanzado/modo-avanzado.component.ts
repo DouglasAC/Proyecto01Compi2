@@ -30,6 +30,7 @@ export class ModoAvanzadoComponent {
 
 
   consultar(paquete: string) {
+    alert(paquete);
     let datos = null;
     let respuesta = $.ajax({
       contentType: 'application/json;  charset=utf-8',
@@ -195,7 +196,7 @@ export class ModoAvanzadoComponent {
   funEjecutar(inde) {
     let code = this.tabspanelcontenido[inde];
     let texto = code.getValue();
-    let envio = "[+QUERY]\n[+USER]" + this.data.usuario + "\n[-USER]\n[+DATA]\n" + texto+ "\n[-DATA]\n[-QUERY]\n";
+    let envio = "[+QUERY][+USER]" + this.data.usuario + "[-USER][+DATA]\n" + texto+ "[-DATA][-QUERY]";
     this.data.tenviado += envio;
     this.consultar(envio);
     //alert(texto);
